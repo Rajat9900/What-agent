@@ -1,5 +1,5 @@
 import styles from "../styles/style.module.css";
-import logoIcon from "../../assets/logoIcon.svg";
+import IconLogo from "../../assets/IconLogo.svg";
 import { TiTick } from "react-icons/ti";
 const ThanksMsgTesting = () => {
   return (
@@ -8,7 +8,7 @@ const ThanksMsgTesting = () => {
         <div className={styles.firstDivBeta1}>
           What{" "}
           <span>
-            <img src={logoIcon} />
+            <img src={IconLogo} />
           </span>{" "}
           <h1>Agent</h1>
         </div>

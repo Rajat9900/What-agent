@@ -1,7 +1,10 @@
 import { useNavigate } from "react-router-dom";
 import styles from "../styles/style.module.css";
 import { useForm } from "react-hook-form";
-import logoIcon from "../../assets/logoIcon.svg";
+// import logoIcon from "../../assets/logoIcon.svg";
+import IconLogo3 from '../../assets/IconLogo3.svg'
+// import IconLogo1 from '../../assets/IconLogo1.svg'
+// import IconLogo2 from '../../assets/IconLogo2.svg'
 import { FaArrowRight } from "react-icons/fa6";
 import msgicon from "../../assets/msgicon.svg";
 import greenTick from "../../assets/greenTick.svg";
@@ -22,7 +25,7 @@ const BetaTestings = () => {
         <div className={styles.firstDivBeta}>
           What{" "}
           <span>
-            <img src={logoIcon} />
+            <img src={IconLogo3} />
           </span>{" "}
           <h1>Agent</h1>
         </div>
@@ -41,7 +44,7 @@ const BetaTestings = () => {
             <label>Email</label>
             <input
               type="email"
-              placeholder="Figmadesign@email.com"
+   
               {...register("email", {
                 required: "Email is required",
                 pattern: {
