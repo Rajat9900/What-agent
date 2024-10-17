@@ -8,16 +8,26 @@ import IconLogo3 from '../../assets/IconLogo3.svg'
 import { FaArrowRight } from "react-icons/fa6";
 import msgicon from "../../assets/msgicon.svg";
 import greenTick from "../../assets/greenTick.svg";
+import { storeEmail } from "../../services";
 const BetaTestings = () => {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm();
   const navigate = useNavigate();
   const onSubmit = (data) => {
     console.log("Email submitted: ", data.email);
-    navigate("/thanksMsg");
+    storeEmail(data).then(res=>{
+      if(res.status==201){
+        reset()
+        navigate("/thanksMsg");
+        // alert("Successfull.")
+      }
+    }).catch(err=>{
+        alert(err.response.data.message)
+    })
   };
   return (
     <div className={styles.mainDiv}>
